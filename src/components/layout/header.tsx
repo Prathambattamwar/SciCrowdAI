@@ -7,11 +7,8 @@ import {
   Home,
   LineChart,
   CircleUser,
-  LogOut,
   Menu,
-  Package2,
   Search,
-  Settings,
   PlusCircle,
   Vote,
 } from "lucide-react";
@@ -41,6 +38,7 @@ import { Separator } from "@/components/ui/separator";
 import { notifications, user } from "@/lib/placeholder-data";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "../theme-toggle";
 
 const navItems = [
     { href: "/", label: "Home", icon: Home },
@@ -150,6 +148,7 @@ export default function Header() {
                 </Card>
             </PopoverContent>
         </Popover>
+        <ThemeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
